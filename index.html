@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.8rem;
+      background-color: white;
+    }
+
+    @media print {
+      html {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        width: 21cm;
+      	height: 29.7cm;
+        margin: 30mm 45mm 30mm 45mm;
+      }
+    }
+
+    body {
+      background: rgb(204,204,204); 
+      width: 21cm;
+      height: 29.7cm;
+      margin: 0 auto;
+      padding: 20mm 45mm 30mm 45mm;
+    }
+
+    page {
+      background: white;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 0.5cm;
+      position: relative;
+    }
+
+    page[size="A4"] {  
+      width: 21cm;
+      height: 29.7cm; 
+    }
+
+    @page {
+      size: 21cm 29.7cm;
+      margin: 0mm;
+    }
+
+    .header h1 {
+      color: black;
+      text-align: center;
+      font-size: 1.7rem;
+      margin-bottom: 0.1rem;
+      padding-bottom: 0;
+    } 
+
+    .header h2 {
+      color: black;
+      text-align: center;
+      font-size: 2.0rem;
+      margin-top: 0;
+      margin-bottom: 0.1rem;
+    }
+
+    .header h3 {
+      color: #444;
+      text-align: center;
+      font-size: 0.8rem;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      padding: 0 20rem;
+      font-size: 1rem;
+      text-align: justify;
+    }
+
+    .header__about-me {
+      padding: 0 0rem;
+    }
+
+    h2 {
+      color: black;
+    }
+
+    h3 {
+      color: #444;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info__item {
+      flex-grow: 1;
+      text-align: center;
+      min-width: 33%;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .columns {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .columns__column {
+      flex-grow: 1;
+    }
+
+    .columns__column--left {
+      flex-grow: 1;
+      width: 30%;
+    }
+
+    .columns__column--right {
+      flex-grow: 1;
+      width: 70%;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      margin-bottom: 1.0rem;
+      justify-content: space-between;
+    }
+
+    .skills__skill {
+      padding: 0.2rem 0.23rem;
+      margin: 0.1rem 0.2rem;
+      font-size: 1.2rem;
+      border: 1px solid gray;
+      border-radius: 10px;
+      background-color: #ddd;
+
+    }
+
+    .skills__skill--important {
+      background-color: #eee;
+    }
+
+    .skills__skill--less-important {
+      background-color: #ddd;
+    }
+
+    .skills__skill--lang {
+      background-color: #ccc;
+    }
+
+    .skills__skill--frameworks {
+      background-color: #c0c0c0;
+    }
+
+    .skills__skill--infra {
+      background-color: #b0b0b0;
+    }
+
+    .skills__skill--db {
+      background-color: #aaa;
+    }
+
+    .experience {
+      margin-bottom: 3rem;
+    }
+
+    .work {
+      margin-bottom: 1.5rem;
+    }
+
+    .work__company {
+      margin-bottom: 0.3rem;
+      padding-bottom: 0;
+      font-size: 1.2rem;
+      color: black;
+    }
+
+    .work__position {
+      margin-top: 0;
+      padding-top: 0;
+      margin-bottom: 0.3rem;
+      padding-bottom: 0;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    .work__time {
+      margin-bottom: 0.4rem;
+    }
+
+    .work__time, .school__time {
+      font-size: 0.9rem;
+    }
+
+    .work__description {
+      margin: 0;
+      padding: 0;
+      font-size: 0.9rem;
+    }
+
+    .school {
+      margin-bottom: 1.5rem;
+    }
+
+    .school__name {
+      margin-bottom: 0.3rem;
+      padding-bottom: 0;
+      color: #444;
+      font-size: 1.2rem;
+    }
+
+    .school__title {
+      margin-top: 0;
+      margin-bottom: 0.3rem;
+      padding-bottom: 0;
+      color: #444;
+      font-size: 1.0rem;
+
+    }
+
+    .school__time {
+      margin-top: 0;
+      margin-bottom: 0.3rem;
+      padding-bottom: 0;
+      color: #444;
+    }
+
+    .project__description {
+      padding: 0;
+    }
+
+    .footer {
+      font-size: 0.8rem;
+    }
+
+    @media print {
+     .footer {
+        position: absolute;
+        bottom: 10mm;
+        left: 0;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div>
+  <div class="header">
+    <h1>Krzysztof Stanisław Zielonka</h1>
+    <h2>Software Engineer</h2>
+    <h3>full-stack focused on backend</h3>
+    <p class="header__about-me">
+      I am a full-stack software engineer (focused on the backend) with more than ten years of experience in Web & Mobile app development.
+      I am experienced in <b>JavaScript</b>, <b>TypeScript</b>, <b>Ruby</b> and <b>Java</b>. My coding style is <b>TDD</b>, <b>OOP</b>, <b>modular-monolith</b>, <b>DDD</b>, <b>CQRS</b>, <b>Clean Architecture</b>, <b>React</b>, <b>Docker</b>, <b>Terraform</b>, <b>AWS</b>. I worked with all kind of DBs: <b>NoSQL</b>, <b>Wide column</b>, <b>SQL</b> ones.
+      I follow <b>"Beck Design Rules"</b>: tests, revel intention, no duplication, fewer elements.
+      I've worked for small software houses and huge product company thanks to what I have experienced from both the worlds and dozens of different technologies.
+      I worked in <b>Scrum</b> methodology being part of smaller teams (1-3 people) as well as bigger ones (5-10) focused on product and delivering MVP in an <b>Agile</b> way.
+      I am an open-minded and friendly person open to new challenges.
+    </p>
+  </div>
+  <div class="contact-info">
+    <div class="contact-info__item">📱 +48 600 056 671</div>
+    <div class="contact-info__item">📧 kzielonka@ymail.com</div>
+    <div class="contact-info__item">🏠 Wrocław, Poland</div>
+    <div class="contact-info__item">
+      <svg height="13" viewBox="0 0 72 72" width="13" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z" fill="#007EBB"/><path d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z" fill="#FFF"/></g></svg>
+      www.linkedin.com/in/krzysztof-stanislaw-zielonka/
+    </div>
+  </div>
+</div>
+<div>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skills__skill skills__skill--important">TDD</div>
+    <div class="skills__skill skills__skill--important">OOP</div>
+    <div class="skills__skill skills__skill--important">DDD</div>
+    <div class="skills__skill skills__skill--important">CQRS</div>
+    <div class="skills__skill skills__skill--important">Modular Monolith</div>
+    <div class="skills__skill skills__skill--less-important">Clean Architecture</div>
+    <div class="skills__skill skills__skill--less-important">Hexagonal Architecture</div>
+    <div class="skills__skill skills__skill--less-important">SOLID</div>
+    <div class="skills__skill skills__skill--lang">Java</div>
+    <div class="skills__skill skills__skill--lang">TypeScript</div>
+    <div class="skills__skill skills__skill--lang">JavaScript</div>
+    <div class="skills__skill skills__skill--lang">Ruby</div>
+    <div class="skills__skill skills__skill--frameworks">Nest.js</div>
+    <div class="skills__skill skills__skill--frameworks">Ruby on Rails</div>
+    <div class="skills__skill skills__skill--frameworks">React</div>
+    <div class="skills__skill skills__skill--infra">AWS</div>
+    <div class="skills__skill skills__skill--infra">Docker</div>
+    <div class="skills__skill skills__skill--infra">Terrafor</div>
+    <div class="skills__skill skills__skill--db">PostgreSQL</div>
+    <div class="skills__skill skills__skill--db">MongoDB</div>
+    <div class="skills__skill skills__skill--db">AWS DynamoDB</div>
+    <div class="skills__skill skills__skill--db">ElasticSearch</div>
+  </div>
+</div>
+<div class="columns">
+  <div class="columns__column">
+    <div class="experience">
+      <h2>Experience</h2>
+      <div class="work">
+        <h3 class="work__company">Revolut</h3>
+        <h4 class="work__position">Senior Software Engineer<br/>(backend Java/Node.js)</h4>
+        <div class="work__time">Mar 2023 - Present (over 1 year)</div>
+        <p class="work__description">
+        I joined Revolut as a <b>Node.js</b> senior engineer but shortly after I started working with <b>Java</b> code. I worked on the POS product which is the point of sale designed for restaurants allowing them to collect orders, payments, manage products, tables, etc.... I got experience with <b>event driven architecture</b> with dozens of micro-services set on the <b>Google Cloud Platform</b> using <b>PostgreSQL</b> and <b>MongoDB DBs</b> with enormous traffic and amount of data.
+        </p>
+      </div>
+      <div class="work">
+        <h3 class="work__company">Droids on Roids</h3>
+        <h4 class="work__position">Senior Software Engineer<br/>(Node.js/Ruby on Rails/React)</h4>
+        <div class="work__time">Dec 2014 - Mar 2023 (7 years)</div>
+        <p class="work__description">
+          It is a software house where I worked on dozens of projects with different technologies.
+          I used <b>Ruby on Rails</b> and <b>Node.js</b> with <b>Nest.js</b> and <b>React</b>.
+          I learned here how to set up easily maintainable apps with architecture led by <b>TDD</b> and the <b>modular-monolith</b> concept.
+          I've got experience with <b>AWS</b> knowing how to set apps on <b>AWS Elastic Beanstalk</b> with <b>Docker</b> containers, <b>AWS DocumentDB</b> (compatible with <b>Mongo</b>) as a main data store, <b>AWS S3</b> for files like images, <b>AWS OpenSearch</b> (based on <b>ElasticSearch</b>) for full-text search, <b>AWS SQS</b> automated by <b>Terraform</b> and <b>Semaphore CI/CD</b>.
+          I've also got experience working directly with clients beeing part of the workshops team which was responsible for helping clients discover the MVP of their products with techniques like <b>Event Storming</b> or <b>Domain Story Telling</b>. 
+        </p>
+      </div>
+      <div class="work">
+        <h3 class="work__company">Software Project</h3>
+        <h4 class="work__position">Fullstack Software Engineer<br/>(Ruby on Rails)</h4>
+        <div class="work__time">Jun 2011 - Dec 2015 (4 years)</div>
+        <p class="work__description">
+          I worked here as a <b>Ruby on Rails</b> developer working on backend code as well as on frontend in <b>JavaScript</b> and <b>CoffeeScript</b>.
+          It was a software house so I was involved in multiple projects working directly with the clients.
+        </p>
+      </div>
+    </div>
+    <div class="education">
+      <h2>Education</h2>
+      <div class="school">
+        <h3 class="school__name">Wrocław University of Science and Technology</h3>
+        <h4 class="school__title">Safe and Efficient Cloud Computing Management</h4>
+        <div class="school__time">2014 - 2015</div>
+      </div>
+      <div class="school">
+        <h3 class="school__name">University of Wrocław</h3>
+        <h4 class="school__title">Master's Degree, Computer Science</h4>
+        <div class="school__time">2012 - 2013</div>
+      </div>
+      <div class="school">
+        <h3 class="school__name">University of Wrocław</h3>
+        <h4 class="school__title">Engineer's Degree, Computer Science</h4>
+        <div class="school__time">2008 - 2012</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  I hereby give consent for my personal data included in the application to be processed for the purposes of the recruitment process.
+</div>
+</body>
+</html>
