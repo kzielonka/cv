@@ -221,7 +221,6 @@
       padding-bottom: 0;
       color: #444;
       font-size: 1.0rem;
-
     }
 
     .school__time {
@@ -256,14 +255,11 @@
   <div class="header">
     <h1>Krzysztof Stanisław Zielonka</h1>
     <h2>Software Engineer</h2>
-    <h3>full-stack focused on backend</h3>
+    <h3>full-stack (backend focused)</h3>
     <p class="header__about-me">
-      I am a full-stack software engineer (focused on the backend) with more than ten years of experience in Web & Mobile app development.
-      I am experienced in <b>JavaScript</b>, <b>TypeScript</b>, <b>Ruby</b> and <b>Java</b>. My coding style is <b>TDD</b>, <b>OOP</b>, <b>modular-monolith</b>, <b>DDD</b>, <b>CQRS</b>, <b>Clean Architecture</b>, <b>React</b>, <b>Docker</b>, <b>Terraform</b>, <b>AWS</b>. I worked with all kind of DBs: <b>NoSQL</b>, <b>Wide column</b>, <b>SQL</b> ones.
-      I follow <b>"Beck Design Rules"</b>: tests, revel intention, no duplication, fewer elements.
-      I've worked for small software houses and huge product company thanks to what I have experienced from both the worlds and dozens of different technologies.
-      I worked in <b>Scrum</b> methodology being part of smaller teams (1-3 people) as well as bigger ones (5-10) focused on product and delivering MVP in an <b>Agile</b> way.
-      I am an open-minded and friendly person open to new challenges.
+    Full-stack software engineer with 10+ years of experience, specializing in backend development for web and mobile applications. Proficient in <b>JavaScript</b>, <b>TypeScript</b>, <b>Ruby</b>, and <b>Java</b>, with strong expertise in <b>TDD</b>, <b>OOP</b>, <b>DDD</b>, <b>CQRS</b>, and <b>Clean Architecture</b>. Experienced with <b>React</b>, <b>Docker</b>, <b>Terraform</b>, <b>AWS</b>, and various databases (<b>SQL</b>, <b>NoSQL</b>, <b>wide-column</b>).
+      <br/><br/>
+      I’ve worked in both small and large companies, contributing to Agile teams (1–10 members) delivering scalable MVPs and products. Committed to clean, testable code following Beck’s Design Rules (tests, revel intention, no duplication, fewer elements). Open-minded and driven by new challenges.
     </p>
   </div>
   <div class="contact-info">
@@ -296,6 +292,7 @@
     <div class="skills__skill skills__skill--frameworks">React</div>
     <div class="skills__skill skills__skill--infra">AWS</div>
     <div class="skills__skill skills__skill--infra">Docker</div>
+    <div class="skills__skill skills__skill--infra">Kubernetes</div>
     <div class="skills__skill skills__skill--infra">Terrafor</div>
     <div class="skills__skill skills__skill--db">PostgreSQL</div>
     <div class="skills__skill skills__skill--db">MongoDB</div>
@@ -308,11 +305,21 @@
     <div class="experience">
       <h2>Experience</h2>
       <div class="work">
+        <h3 class="work__company">Grapes</h3>
+        <h4 class="work__position">Lead Software Engineer<br/>(full-stack Node.js/TS/React)</h4>
+        <div class="work__time">Jun 2024 - Present (over 1 year)</div>
+        <p class="work__description">
+        An <b>e-commerce</b> platform for natural wines featuring an AI-powered wine scan functionality. This comprehensive project included <b>Stripe</b> payment integration, order processing, multiple <b>React</b> frontends, image processing via an integrated <b>AI Python</b> service, and <b>Shopify</b> integrations.
+        The platform was built as a <b>modular monolith</b> with highly separated, well-tested modules designed in <b>DDD</b> <b>event-sourced aggregates</b>. I was involved in all phases of the project—initial setup, development, and delivery—working both independently and as part of a team of around 10 people.
+        </p>
+      </div>
+      <div class="work">
         <h3 class="work__company">Revolut</h3>
         <h4 class="work__position">Senior Software Engineer<br/>(backend Java/Node.js)</h4>
-        <div class="work__time">Mar 2023 - Present (over 1 year)</div>
+        <div class="work__time">Mar 2023 - Apr 2024 (over 1 year)</div>
         <p class="work__description">
-        I joined Revolut as a <b>Node.js</b> senior engineer but shortly after I started working with <b>Java</b> code. I worked on the POS product which is the point of sale designed for restaurants allowing them to collect orders, payments, manage products, tables, etc.... I got experience with <b>event driven architecture</b> with dozens of micro-services set on the <b>Google Cloud Platform</b> using <b>PostgreSQL</b> and <b>MongoDB DBs</b> with enormous traffic and amount of data.
+          I joined Revolut as a Senior <b>Node.js</b> Engineer and soon transitioned to working with <b>Java</b>. I was part of the <b>POS (Point of Sale)</b> team, developing a subproduct tailored for restaurants, covering modules such as orders, payments, reporting, product, and table management.
+          I gained hands-on experience with <b>event-driven architecture</b> and a <b>microservices</b> ecosystem running on <b>Google Cloud Platform</b>, handling high traffic and <b>large-scale data</b> using <b>PostgreSQL</b> and <b>MongoDB</b>.
         </p>
       </div>
       <div class="work">
@@ -320,11 +327,9 @@
         <h4 class="work__position">Senior Software Engineer<br/>(Node.js/Ruby on Rails/React)</h4>
         <div class="work__time">Dec 2014 - Mar 2023 (7 years)</div>
         <p class="work__description">
-          It is a software house where I worked on dozens of projects with different technologies.
-          I used <b>Ruby on Rails</b> and <b>Node.js</b> with <b>Nest.js</b> and <b>React</b>.
-          I learned here how to set up easily maintainable apps with architecture led by <b>TDD</b> and the <b>modular-monolith</b> concept.
-          I've got experience with <b>AWS</b> knowing how to set apps on <b>AWS Elastic Beanstalk</b> with <b>Docker</b> containers, <b>AWS DocumentDB</b> (compatible with <b>Mongo</b>) as a main data store, <b>AWS S3</b> for files like images, <b>AWS OpenSearch</b> (based on <b>ElasticSearch</b>) for full-text search, <b>AWS SQS</b> automated by <b>Terraform</b> and <b>Semaphore CI/CD</b>.
-          I've also got experience working directly with clients beeing part of the workshops team which was responsible for helping clients discover the MVP of their products with techniques like <b>Event Storming</b> or <b>Domain Story Telling</b>. 
+        At Droids, I worked on multiple projects using <b>Ruby on Rails</b>, <b>Node.js</b>, <b>Nest.js</b>, <b>React</b>, and other technologies. I focused on building maintainable apps following <b>TDD</b>, the <b>modular-monolith</b> architecture and <b>DDD</b> approach with <b>event sourced</b> models.
+          I set up infrastructure on <b>AWS</b> using <B>Elastic Beanstalk</b> with <b>Docker</b>, <b>DocumentDB</b>, <b>S3</b>, <b>OpenSearch</b>, <b>SQS</b>, and <b>Terraform</b>, with <b>CI/CD</b>.
+          I collaborated directly with clients and participated in discovery workshops using <b>Event Storming</b> and <b>Domain Storytelling</b> to define <b>MVPs</b> and project scope.
         </p>
       </div>
       <div class="work">
@@ -332,8 +337,7 @@
         <h4 class="work__position">Fullstack Software Engineer<br/>(Ruby on Rails)</h4>
         <div class="work__time">Jun 2011 - Dec 2015 (4 years)</div>
         <p class="work__description">
-          I worked here as a <b>Ruby on Rails</b> developer working on backend code as well as on frontend in <b>JavaScript</b> and <b>CoffeeScript</b>.
-          It was a software house so I was involved in multiple projects working directly with the clients.
+          My first role was as a <b>Ruby on Rails</b> developer, contributing to both backend development and frontend implementation using <b>JavaScript</b> and <b>CoffeeScript</b>. Working at a software house, I was involved in multiple projects and collaborated directly with a diverse range of clients.
         </p>
       </div>
     </div>
